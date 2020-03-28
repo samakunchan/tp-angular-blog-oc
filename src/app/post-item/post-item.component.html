@@ -1,0 +1,22 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-danger': like === 0,'list-group-item-success': like > 0}">
+  <h2>{{ title }}</h2>
+  <p>
+    {{ createdAt | date }}
+  </p>
+  <p>
+    {{ content }}
+  </p>
+  <div class="row">
+    <p>
+      {{ like }} like(s)
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <button (click)="increment()">J'aime</button>
+    </div>
+    <div class="col-2">
+      <button (click)="decrement()">J'aime pas</button>
+    </div>
+  </div>
+</li>
